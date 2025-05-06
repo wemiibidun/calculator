@@ -47,14 +47,12 @@ This calculator allows users to:
 ✅ Select an arithmetic operator: +, -, *, /, ^  
 ✅ Instantly see the result of the calculation  
 ✅ Clear the form and reset to the default  
-✅ Responsive layout with themed styles
 
 ---
 
 ## Link to Live Demo
 
-🔗 [View the Live Calculator](https://yourusername.github.io/simple-calculator/)  
-> *(Update this link with your actual GitHub Pages URL)*
+🔗 [View the Live Calculator](https://wemiibidun.github.io/calculator/)  
 
 ---
 
