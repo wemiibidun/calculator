@@ -24,7 +24,7 @@ This project was created to strengthen DOM manipulation, event handling, and for
 ---
 
 ## Screenshot
-![Calculator Screenshot](https://your-image-link.com/calculator.png)
+![Calculator Screenshot](https://github.com/wemiibidun/calculator/blob/main/calculator.png)
 
 ---
 
