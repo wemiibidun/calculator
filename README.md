@@ -24,10 +24,7 @@ This project was created to strengthen DOM manipulation, event handling, and for
 ---
 
 ## Screenshot
-
-> *(Add your screenshot here)*  
-Example:  
-![Calculator Screenshot](https://your-image-link.com/simple-calculator-screenshot.png)
+![Calculator Screenshot](https://your-image-link.com/calculator.png)
 
 ---
 
