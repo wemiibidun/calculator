@@ -17,13 +17,13 @@ A beginner-friendly calculator built with HTML, CSS, and vanilla JavaScript. Thi
 
 ---
 
-## 📘 Introduction
+## Introduction
 
 This project was created to strengthen DOM manipulation, event handling, and form input processing using only **vanilla JavaScript**. It includes styled input fields, operator selection, and real-time result display—all without needing a page refresh or any frameworks.
 
 ---
 
-## 📸 Screenshot
+## Screenshot
 
 > *(Add your screenshot here)*  
 Example:  
@@ -31,7 +31,7 @@ Example:
 
 ---
 
-## 🛠️ Technologies
+## Technologies
 
 ![HTML](https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white)  
 ![CSS](https://img.shields.io/badge/CSS-239120?style=for-the-badge&logo=css3&logoColor=white)  
@@ -43,26 +43,26 @@ Example:
 
 ---
 
-## ✨ Features
+## Features
 
 This calculator allows users to:
 
 ✅ Enter two numbers  
 ✅ Select an arithmetic operator: +, -, *, /, ^  
 ✅ Instantly see the result of the calculation  
-✅ Clear the form and reset to default  
+✅ Clear the form and reset to the default  
 ✅ Responsive layout with themed styles
 
 ---
 
-## 🌐 Link to Live Demo
+## Link to Live Demo
 
 🔗 [View the Live Calculator](https://yourusername.github.io/simple-calculator/)  
 > *(Update this link with your actual GitHub Pages URL)*
 
 ---
 
-## 🚀 Status
+## Status
 
 Project is: ✅ **Complete**
 
