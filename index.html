@@ -1,141 +1,85 @@
-﻿<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8" />
-        <title>Calculator</title>
-        <!-- CSS -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-            integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-        <link rel="stylesheet" href="calculator.css">
-        <!-- Load React. -->
-        <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
-        <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
-        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
-        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
-    </head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Simple Calculator</title>
+  <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+  <div class="app-wrapper">
+    
+    <!-- Header Section -->
+    <div class="header">
+      <img src="background.png" alt="background image" />
+    </div>
 
-    <body>
-        <div id="root"></div>
-        <script type="text/babel">
-            // The below code renders the React Element in the our HTML 
-            const root = ReactDOM.createRoot(document.getElementById('root'));
+    <!-- Content Section -->
+    <div class="content">
+      <h1 class="title">Calculator</h1>
+      
+      <div class="content-container">
+        <label for="num1">First Number:</label>
+        <input type="number" id="num1" />
 
-            function Calculator() {
-                const [num1, setNum1] = React.useState(0);
-                const [num2, setNum2] = React.useState(0);
-                const [operator, setOperator] = React.useState('+');
-                const [result, setResult] = React.useState(0);
+        <label for="num2">Second Number:</label>
+        <input type="number" id="num2" />
 
-                const handleNum1Change = (event) => {
-                    setNum1(parseFloat(event.target.value));
-                };
+        <label for="operator">Select Operator:</label>
+        <div class="option-box">
+          <select id="operator">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+            <option value="^">^</option>
+          </select>
+        </div>
 
-                const handleNum2Change = (event) => {
-                    setNum2(parseFloat(event.target.value));
-                };
+        <br />
+        <button class="btn" onclick="calculate()">Calculate</button>
+        <button class="btn" onclick="clearFields()">Clear</button>
 
-                const handleOperatorChange = (event) => {
-                    setOperator(event.target.value);
-                };
+        <p id="result">Result will appear here</p>
+      </div>
+    </div>
 
-                const handleCalculate = () => {
-                    let calcResult;
-                    if (operator === '+') {
-                        calcResult = num1 + num2;
-                    } else if (operator === '-') {
-                        calcResult = num1 - num2;
-                    } else if (operator === '*') {
-                        calcResult = num1 * num2;
-                    } else if (operator === '/') {
-                        calcResult = num1 / num2;
-                    } else if (operator === '^'){
-                        calcResult = num1 ** num2;
-                    }
-                    else {
-                        calcResult = 0;
-                    }
-                setResult(calcResult);
-            };
+    <!-- Footer Section -->
+    <div class="footer">
+      <p>© 2024 Wemi Ibidun</p>
+    </div>
+  </div>
 
-            const handleClearResult = (e) =>{
-                setNum1(0)
-                setOperator("+")
-                setNum2(0)
-                setResult(0)
-            }
+  <!-- JavaScript Logic -->
+  <script>
+    function calculate() {
+      const num1 = parseFloat(document.getElementById('num1').value);
+      const num2 = parseFloat(document.getElementById('num2').value);
+      const operator = document.getElementById('operator').value;
+      let result;
 
-            return (
-                <div className="app-wrapper">
-                    
-                    <div className="header">
-                        <img src="background.jpg" alt="background" />
-                    </div>
-                    
-                    <div className="my-2 pt-0 p-3 mb-0 content">
-                        <div className="row">
-                            <div className="col-12">
-                                <h1 className="title fw-bolder text-center mt-3">
-                                    Calculator
-                                </h1>
-                            </div>
+      if (isNaN(num1) || isNaN(num2)) {
+        result = 'Please enter valid numbers';
+      } else {
+        switch (operator) {
+          case '+': result = num1 + num2; break;
+          case '-': result = num1 - num2; break;
+          case '*': result = num1 * num2; break;
+          case '/': result = num2 !== 0 ? num1 / num2 : 'Error: Divide by zero'; break;
+          case '^': result = Math.pow(num1, num2); break;
+          default: result = 'Invalid operator';
+        }
+      }
 
-                            <div className="row justify-content-center ps-2 ms-0">
-                                <div class="content-container col-md-6 card mb-0 pt-2 pb-4">
-                                    
-                                    <label>
-                                        Enter First Number:
-                                        <input class="form-control" type="number" value={num1} onChange={handleNum1Change} />
-                                    </label>
-                                    <br />
-                                    <label>
-                                        Enter Second Number:
-                                        <input class="form-control"  type="number" value={num2} onChange={handleNum2Change} />
-                                    </label>
-                                    <br />
-                                    <label>
-                                        Select Operator:
-                                        <div className="option-box">
-                                        <select value={operator} onChange={handleOperatorChange}>
-                                        
-                                            <option value="+">+</option>
-                                            <option value="-">-</option>
-                                            <option value="*">*</option>
-                                            <option value="/">/</option>
-                                            <option value="^">^</option>
-                                        
-                                        </select>
-                                    </div>
-                                    </label>
-                                    <br />
-                                    <button type="button" class="btn btn-primary" onClick={handleCalculate}>Calculate</button>
-                                    <br />
-                                    <p>{!isNaN(num1) ? num1 : ''} {operator} {!isNaN(num2) ? num2 : ''} = {!isNaN(result) ? result : ''} </p>
-                                    <button type="button" class="btn btn-primary" onClick={handleClearResult}>Clear Result</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                   
-                    <div className="footer">
-                        <p className="pt-3">Copyright © 2024 Wemi Ibidun</p>
-                    </div>
-                   
-                </div>
-            )
-            }
+      document.getElementById('result').textContent = `${num1} ${operator} ${num2} = ${result}`;
+    }
 
-            root.render(
-                <div className="App">
-                    <Calculator/>
-                </div>
-            );
-        </script>
-
-        <!-- JavaScript Bundle with Popper -->
-        <script 
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
-            crossorigin="anonymous">
-        </script>
-    </body>
+    function clearFields() {
+      document.getElementById('num1').value = '';
+      document.getElementById('num2').value = '';
+      document.getElementById('operator').value = '+';
+      document.getElementById('result').textContent = 'Result will appear here';
+    }
+  </script>
+</body>
 </html>
