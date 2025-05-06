@@ -68,13 +68,20 @@ Project is: ✅ **Complete**
 
 ---
 
-## 💻 How to Run the Project Locally
+## How to Run the Project Locally
 
 ```bash
 # Clone the repo
-git clone https://github.com/yourusername/simple-calculator.git
+git clone https://github.com/wemiibidun/dynamic-todo-list.git
 
 # Navigate into the project folder
-cd simple-calculator
+cd dynamic-todo-list
 
 # Open index.html in your browser
+```
+---
+
+## Contact
+Created by [@wemiibidun](https://twitter.com/wemiibidun/). Feel free to contact me via wemiibidun@gmail.com
+
+---
