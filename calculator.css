@@ -1,0 +1,99 @@
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    min-height: 100%;
+    margin: 0 0 0 0;
+    background-color: white;
+}
+
+.App {
+    font-family: sans-serif;
+    text-align: center;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-size: cover;
+}
+
+.app-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+        "header header header header"
+        "contnt contnt contnt contnt"
+        "footer footer footer footer";
+    height: 100vh;
+    width: 100%;
+}
+
+.content-container {
+    border-radius: 30px;
+    box-shadow:2px 2px rgba(221, 212, 179, 0.5), inset -5px -5px 15px rgba(253, 248, 248, 0.58), inset 5px 5px 15px rgba(250, 244, 211, 0.71);
+}
+
+.header {
+    height: 200px;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    grid-area: header;
+    background-color: #FFC55A;
+}
+
+.header img {
+    max-width: 100%;
+    width:100%;
+    height: 20rem;
+}
+
+.title, label {
+    color: #337357
+}
+
+.btn {
+    background-color: #436850;
+    border-color: #436850;
+}
+
+.btn:hover {
+    background-color: #ADBC9F;
+    border-color: #ADBC9F;
+}
+
+.btn:focus {
+    background-color: #ADBC9F;
+    border-color: #ADBC9F;
+}
+
+.content {
+    grid-area: contnt;
+    background-color:#FFFBDA;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #F3CA52;
+}
+
+.option-box select {
+  background-color: #80BCBD;
+  color: white;
+  padding: 5px;
+  width: 100px;
+  border: none;
+  font-size: 20px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  -webkit-appearance: button;
+  appearance: button;
+  outline: none;
+}
