@@ -1,6 +1,6 @@
 # 🧮 Simple Calculator App
 
-A beginner-friendly calculator built with HTML, CSS, and vanilla JavaScript. This web-based tool lets users enter two numbers, choose an operator, and view the result instantly—all in a clean, responsive layout!
+A beginner-friendly calculator built with HTML, CSS, and vanilla JavaScript. This web-based tool lets users enter two numbers, choose an operator, and view the result instantly in a clean, responsive layout!
 
 ---
 
