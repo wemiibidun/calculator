@@ -19,7 +19,7 @@ A beginner-friendly calculator built with HTML, CSS, and vanilla JavaScript. Thi
 
 ## Introduction
 
-This project was created to strengthen DOM manipulation, event handling, and form input processing using only **vanilla JavaScript**. It includes styled input fields, operator selection, and real-time result display—all without needing a page refresh or any frameworks.
+This calculator project was built to practice working with input fields, buttons, and arithmetic logic using HTML, CSS, and vanilla JavaScript. It performs simple arithmetic operations
 
 ---
 
