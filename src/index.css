@@ -1,0 +1,20 @@
+:root {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "SF Pro Display", "SF Pro Text", "Helvetica Neue", Helvetica, sans-serif;
+  background: radial-gradient(circle at top, #1d1f2b 0%, #0a0a0f 55%, #070709 100%);
+  display: grid;
+  place-items: center;
+}
+
+#root {
+  width: 100%;
+}
