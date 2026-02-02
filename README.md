@@ -19,7 +19,6 @@ This project is a clean, Apple-inspired calculator built with React and Vite. It
 
 ## Screenshot
 ![Apple-style calculator preview](public/preview.png)
-![Apple-style calculator preview](https://github.com/wemiibidun/weather_app2_react/blob/main/Screen%20Shot.png)
 
 ## Technologies
 ![React](https://img.shields.io/badge/React-239120?style=for-the-badge&logo=react&logoColor=white)
