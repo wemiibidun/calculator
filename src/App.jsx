@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import "./App.css";
 
 const BUTTONS = [
@@ -78,7 +78,7 @@ export default function App() {
 
   const activeOperatorLabel = operator ? OPERATOR_LABELS[operator] : null;
 
-  const handleDigit = (digit) => {
+  const handleDigit = useCallback((digit) => {
     if (waitingForInput) {
       setDisplay(digit);
       setWaitingForInput(false);
@@ -86,9 +86,9 @@ export default function App() {
     }
 
     setDisplay((current) => (current === "0" ? digit : current + digit));
-  };
+  }, [waitingForInput]);
 
-  const handleDot = () => {
+  const handleDot = useCallback(() => {
     if (waitingForInput) {
       setDisplay("0.");
       setWaitingForInput(false);
@@ -98,9 +98,9 @@ export default function App() {
     if (!display.includes(".")) {
       setDisplay((current) => current + ".");
     }
-  };
+  }, [display, waitingForInput]);
 
-  const handleClear = () => {
+  const handleClear = useCallback(() => {
     if (isAllClear) {
       return;
     }
@@ -113,21 +113,21 @@ export default function App() {
     setPreviousValue(null);
     setOperator(null);
     setWaitingForInput(false);
-  };
+  }, [display, isAllClear]);
 
-  const handleToggleSign = () => {
+  const handleToggleSign = useCallback(() => {
     if (display === "0" || display === "Error") return;
     setDisplay((current) => (current.startsWith("-") ? current.slice(1) : `-${current}`));
-  };
+  }, [display]);
 
-  const handlePercent = () => {
+  const handlePercent = useCallback(() => {
     if (display === "Error") return;
     const value = parseFloat(display);
     const result = value / 100;
     setDisplay(formatNumber(result));
-  };
+  }, [display]);
 
-  const handleOperator = (nextOperator) => {
+  const handleOperator = useCallback((nextOperator) => {
     if (display === "Error") {
       setDisplay("0");
       setPreviousValue(null);
@@ -155,9 +155,9 @@ export default function App() {
 
     setOperator(nextOperator);
     setWaitingForInput(true);
-  };
+  }, [display, operator, previousValue, waitingForInput]);
 
-  const handleEqual = () => {
+  const handleEqual = useCallback(() => {
     if (!operator) return;
 
     const inputValue = parseFloat(display);
@@ -175,7 +175,7 @@ export default function App() {
     setPreviousValue(null);
     setOperator(null);
     setWaitingForInput(true);
-  };
+  }, [display, operator, previousValue]);
 
   const buttonGrid = useMemo(() => BUTTONS, []);
 
@@ -211,7 +211,7 @@ export default function App() {
 
     window.addEventListener("keydown", handleKeydown);
     return () => window.removeEventListener("keydown", handleKeydown);
-  });
+  }, [handleClear, handleDigit, handleDot, handleEqual, handleOperator]);
 
   return (
     <div className="app-shell">

@@ -1,4 +1,4 @@
-# Apple-Style Calculator
+# Classic Calculator
 
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/wemiibidun/calculator)
 ![GitHub languages count](https://img.shields.io/github/languages/count/wemiibidun/calculator)
@@ -48,7 +48,7 @@ This project is a clean, Apple-inspired calculator built with React and Vite. It
 5. In GitHub: **Settings → Pages** → Source: **Deploy from a branch** → **gh-pages** → **/ (root)**.
 
 ## Link to Published Project
-[Apple Calculator Webpage](https://wemiibidun.github.io/calculator/)
+[Calculator Webpage](https://wemiibidun.github.io/calculator/)
 
 ## Status
 Project is: _Complete_
