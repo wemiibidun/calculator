@@ -1,8 +1,8 @@
 # Classic Calculator
 
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/wemiibidun/calculator)
-![GitHub languages count](https://img.shields.io/github/languages/count/wemiibidun/calculator)
-[![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](https://wemiibidun.github.io/calculator/)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/wemiibidun/classic_calculator)
+![GitHub languages count](https://img.shields.io/github/languages/count/wemiibidun/classic_calculator)
+[![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](https://wemiibidun.github.io/classic_calculator/)
 
 ## Table of contents
 * [Introduction](#introduction)
@@ -15,7 +15,7 @@
 * [Contact](#contact)
 
 ## Introduction
-This project is a clean, Apple-inspired calculator built with React and Vite. It focuses on polished UI and reliable core calculator behavior, and it also supports keyboard input for quick calculations.
+This project is a clean, classic calculator built with React and Vite. It focuses on polished UI and reliable core calculator behavior, and it also supports keyboard input for quick calculations.
 
 ## Screenshot
 ![Apple-style calculator preview](public/preview.png)
@@ -37,7 +37,7 @@ This project is a clean, Apple-inspired calculator built with React and Vite. It
 
 ## Deployment (Vite + GitHub Pages)
 1. Set the base path in `vite.config.js`:
-   * `base: "/calculator/"`
+   * `base: "/classic_calculator/"`
 2. Install the deploy tool:
    * `npm install --save-dev gh-pages`
 3. Add scripts in `package.json`:
@@ -48,7 +48,7 @@ This project is a clean, Apple-inspired calculator built with React and Vite. It
 5. In GitHub: **Settings → Pages** → Source: **Deploy from a branch** → **gh-pages** → **/ (root)**.
 
 ## Link to Published Project
-[Calculator Webpage](https://wemiibidun.github.io/calculator/)
+[Classic Calculator Webpage](https://wemiibidun.github.io/classic_calculator/)
 
 ## Status
 Project is: _Complete_
